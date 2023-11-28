@@ -1,0 +1,45 @@
+time="2023-11-28T19:49:51.574443619Z" level=info msg="starting Dapr Runtime -- version 1.9.4 -- commit 576ac0348e56e25b906d9e7a5c817db451cc5b34" app_id=parking-api instance=4ed05f6dede7 scope=dapr.runtime type=log ver=1.9.4
+time="2023-11-28T19:49:51.574502582Z" level=info msg="log level set to: debug" app_id=parking-api instance=4ed05f6dede7 scope=dapr.runtime type=log ver=1.9.4
+time="2023-11-28T19:49:51.575163948Z" level=info msg="metrics server started on :9090/" app_id=parking-api instance=4ed05f6dede7 scope=dapr.metrics type=log ver=1.9.4
+time="2023-11-28T19:49:51.598557735Z" level=debug msg="Resiliency is not enabled." app_id=parking-api instance=4ed05f6dede7 scope=dapr.runtime type=log ver=1.9.4
+time="2023-11-28T19:49:51.598826467Z" level=info msg="standalone mode configured" app_id=parking-api instance=4ed05f6dede7 scope=dapr.runtime type=log ver=1.9.4
+time="2023-11-28T19:49:51.598918562Z" level=info msg="app id: parking-api" app_id=parking-api instance=4ed05f6dede7 scope=dapr.runtime type=log ver=1.9.4
+time="2023-11-28T19:49:51.599492065Z" level=info msg="mTLS is disabled. Skipping certificate request and tls validation" app_id=parking-api instance=4ed05f6dede7 scope=dapr.runtime type=log ver=1.9.4
+time="2023-11-28T19:49:51.599775044Z" level=info msg="Dapr trace sampler initialized: DaprTraceSampler(P=1.000000)" app_id=parking-api instance=4ed05f6dede7 scope=dapr.runtime type=log ver=1.9.4
+time="2023-11-28T19:49:51.601663722Z" level=info msg="local service entry announced: parking-api -> 172.18.0.3:34335" app_id=parking-api instance=4ed05f6dede7 scope=dapr.contrib type=log ver=1.9.4
+time="2023-11-28T19:49:51.601949717Z" level=info msg="Initialized name resolution to mdns" app_id=parking-api instance=4ed05f6dede7 scope=dapr.runtime type=log ver=1.9.4
+time="2023-11-28T19:49:51.602809739Z" level=info msg="loading components" app_id=parking-api instance=4ed05f6dede7 scope=dapr.runtime type=log ver=1.9.4
+time="2023-11-28T19:49:51.632806951Z" level=warning msg="A non-YAML Component file sxsystemsdapr-secrets.json was detected, it will not be loaded" app_id=parking-api instance=4ed05f6dede7 scope=dapr.runtime.components type=log ver=1.9.4
+time="2023-11-28T19:49:51.669963176Z" level=debug msg="found component. name: sx-pubsub, type: pubsub.rabbitmq/v1" app_id=parking-api instance=4ed05f6dede7 scope=dapr.runtime type=log ver=1.9.4
+time="2023-11-28T19:49:51.670040844Z" level=debug msg="found component. name: sxsystemsdapr-secretstore, type: secretstores.local.file/v1" app_id=parking-api instance=4ed05f6dede7 scope=dapr.runtime type=log ver=1.9.4
+time="2023-11-28T19:49:51.670062796Z" level=debug msg="found component. name: sxsystems-statestore, type: state.redis/v1" app_id=parking-api instance=4ed05f6dede7 scope=dapr.runtime type=log ver=1.9.4
+time="2023-11-28T19:49:51.670129864Z" level=debug msg="loading component. name: sx-pubsub, type: pubsub.rabbitmq/v1" app_id=parking-api instance=4ed05f6dede7 scope=dapr.runtime type=log ver=1.9.4
+time="2023-11-28T19:49:51.670254972Z" level=warning msg="[DEPRECATION NOTICE] The 'host' argument is deprecated. Use 'connectionString' or individual connection arguments instead: https://docs.dapr.io/reference/components-reference/supported-pubsub/setup-rabbitmq/" app_id=parking-api instance=4ed05f6dede7 scope=dapr.contrib type=log ver=1.9.4
+time="2023-11-28T19:49:51.670566711Z" level=info msg="rabbitmq pub/sub: connectionCount: current=0 reference=0" app_id=parking-api instance=4ed05f6dede7 scope=dapr.contrib type=log ver=1.9.4
+time="2023-11-28T19:49:51.673493005Z" level=info msg="component loaded. name: sx-pubsub, type: pubsub.rabbitmq/v1" app_id=parking-api instance=4ed05f6dede7 scope=dapr.runtime type=log ver=1.9.4
+time="2023-11-28T19:49:51.673812324Z" level=debug msg="loading component. name: sxsystemsdapr-secretstore, type: secretstores.local.file/v1" app_id=parking-api instance=4ed05f6dede7 scope=dapr.runtime type=log ver=1.9.4
+time="2023-11-28T19:49:51.706217643Z" level=info msg="component loaded. name: sxsystemsdapr-secretstore, type: secretstores.local.file/v1" app_id=parking-api instance=4ed05f6dede7 scope=dapr.runtime type=log ver=1.9.4
+time="2023-11-28T19:49:51.706310851Z" level=debug msg="loading component. name: sxsystems-statestore, type: state.redis/v1" app_id=parking-api instance=4ed05f6dede7 scope=dapr.runtime type=log ver=1.9.4
+time="2023-11-28T19:49:51.706337321Z" level=error msg="error getting secret: secret State.RedisPassword not found" app_id=parking-api instance=4ed05f6dede7 scope=dapr.runtime type=log ver=1.9.4
+time="2023-11-28T19:49:51.711224653Z" level=info msg="waiting for all outstanding components to be processed" app_id=parking-api instance=4ed05f6dede7 scope=dapr.runtime type=log ver=1.9.4
+time="2023-11-28T19:49:51.717965044Z" level=info msg="detected actor state store: sxsystems-statestore" app_id=parking-api instance=4ed05f6dede7 scope=dapr.runtime type=log ver=1.9.4
+time="2023-11-28T19:49:51.718053373Z" level=info msg="component loaded. name: sxsystems-statestore, type: state.redis/v1" app_id=parking-api instance=4ed05f6dede7 scope=dapr.runtime type=log ver=1.9.4
+time="2023-11-28T19:49:51.718080414Z" level=info msg="all outstanding components processed" app_id=parking-api instance=4ed05f6dede7 scope=dapr.runtime type=log ver=1.9.4
+time="2023-11-28T19:49:51.718096024Z" level=info msg="gRPC proxy enabled" app_id=parking-api instance=4ed05f6dede7 scope=dapr.runtime type=log ver=1.9.4
+time="2023-11-28T19:49:51.718161989Z" level=info msg="enabled gRPC tracing middleware" app_id=parking-api instance=4ed05f6dede7 scope=dapr.runtime.grpc.api type=log ver=1.9.4
+time="2023-11-28T19:49:51.718190534Z" level=info msg="enabled gRPC metrics middleware" app_id=parking-api instance=4ed05f6dede7 scope=dapr.runtime.grpc.api type=log ver=1.9.4
+time="2023-11-28T19:49:51.718286046Z" level=info msg="API gRPC server is running on port 50001" app_id=parking-api instance=4ed05f6dede7 scope=dapr.runtime type=log ver=1.9.4
+time="2023-11-28T19:49:51.719288315Z" level=info msg="enabled metrics http middleware" app_id=parking-api instance=4ed05f6dede7 scope=dapr.runtime.http type=log ver=1.9.4
+time="2023-11-28T19:49:51.719313112Z" level=info msg="enabled tracing http middleware" app_id=parking-api instance=4ed05f6dede7 scope=dapr.runtime.http type=log ver=1.9.4
+time="2023-11-28T19:49:51.719366945Z" level=info msg="http server is running on port 3500" app_id=parking-api instance=4ed05f6dede7 scope=dapr.runtime type=log ver=1.9.4
+time="2023-11-28T19:49:51.71938008Z" level=info msg="The request body size parameter is: 4" app_id=parking-api instance=4ed05f6dede7 scope=dapr.runtime type=log ver=1.9.4
+time="2023-11-28T19:49:51.719403956Z" level=info msg="enabled gRPC tracing middleware" app_id=parking-api instance=4ed05f6dede7 scope=dapr.runtime.grpc.internal type=log ver=1.9.4
+time="2023-11-28T19:49:51.719417461Z" level=info msg="enabled gRPC metrics middleware" app_id=parking-api instance=4ed05f6dede7 scope=dapr.runtime.grpc.internal type=log ver=1.9.4
+time="2023-11-28T19:49:51.71945902Z" level=info msg="internal gRPC server is running on port 34335" app_id=parking-api instance=4ed05f6dede7 scope=dapr.runtime type=log ver=1.9.4
+time="2023-11-28T19:49:51.719475682Z" level=info msg="application protocol: http. waiting on port 80.  This will block until the app is listening on that port." app_id=parking-api instance=4ed05f6dede7 scope=dapr.runtime type=log ver=1.9.4
+time="2023-11-28T19:50:21.61510966Z" level=debug msg="Refreshing all mDNS addresses." app_id=parking-api instance=4ed05f6dede7 scope=dapr.contrib type=log ver=1.9.4
+time="2023-11-28T19:50:21.615244677Z" level=debug msg="no mDNS apps to refresh." app_id=parking-api instance=4ed05f6dede7 scope=dapr.contrib type=log ver=1.9.4
+time="2023-11-28T19:50:51.610554122Z" level=debug msg="Refreshing all mDNS addresses." app_id=parking-api instance=4ed05f6dede7 scope=dapr.contrib type=log ver=1.9.4
+time="2023-11-28T19:50:51.610641218Z" level=debug msg="no mDNS apps to refresh." app_id=parking-api instance=4ed05f6dede7 scope=dapr.contrib type=log ver=1.9.4
+time="2023-11-28T19:51:21.611015657Z" level=debug msg="Refreshing all mDNS addresses." app_id=parking-api instance=4ed05f6dede7 scope=dapr.contrib type=log ver=1.9.4
+time="2023-11-28T19:51:21.611149883Z" level=debug msg="no mDNS apps to refresh." app_id=parking-api instance=4ed05f6dede7 scope=dapr.contrib type=log ver=1.9.4
