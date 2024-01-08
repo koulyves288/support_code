@@ -1,0 +1,226 @@
+Name:         parking-api-6bff798655-cntzv
+Namespace:    dapr-system
+Priority:     0
+Node:         aks-agentpool-30676769-vmss000000/10.224.0.4
+Start Time:   Sun, 07 Jan 2024 21:38:33 -0600
+Labels:       app=parking-api
+              dapr.io/app-id=parking-api
+              dapr.io/metrics-enabled=true
+              dapr.io/sidecar-injected=true
+              pod-template-hash=6bff798655
+Annotations:  dapr.io/app-health-check-path: /healthz
+              dapr.io/app-health-probe-interval: 3
+              dapr.io/app-health-probe-timeout: 200
+              dapr.io/app-health-threshold: 2
+              dapr.io/app-id: parking-api
+              dapr.io/app-port: 3000
+              dapr.io/config: daprsystem
+              dapr.io/enable-app-health-check: true
+              dapr.io/enabled: true
+              dapr.io/grpc-port: 50001
+              dapr.io/volume-mounts: volume1:/mnt/v1,volume2:/mnt/v2
+              dapr.io/volume-mounts-rw: volume3:/mnt/v3
+Status:       Running
+IP:           10.224.0.76
+IPs:
+  IP:           10.224.0.76
+Controlled By:  ReplicaSet/parking-api-6bff798655
+Containers:
+  parking-api:
+    Container ID:   containerd://1ba6bbca075ae6c97403601d2ed867e1bc5cc89db8f6375e7bfc7860cfb87695
+    Image:          servicex.azurecr.io/parking-api:latest
+    Image ID:       servicex.azurecr.io/parking-api@sha256:fdde9fe6c0269d8854569020852dce7efb9b06a8a34876db8d9eefe566a66480
+    Port:           3000/TCP
+    Host Port:      0/TCP
+    State:          Waiting
+      Reason:       CrashLoopBackOff
+    Last State:     Terminated
+      Reason:       Error
+      Exit Code:    139
+      Started:      Sun, 07 Jan 2024 22:17:41 -0600
+      Finished:     Sun, 07 Jan 2024 22:17:52 -0600
+    Ready:          False
+    Restart Count:  12
+    Limits:
+      cpu:     300m
+      memory:  1000Mi
+    Requests:
+      cpu:     100m
+      memory:  250Mi
+    Environment:
+      ASPNETCORE_ENVIRONMENT:  Development
+      ASPNETCORE_URLS:         https://+:443;http://+:80
+      DAPR_HTTP_PORT:          3500
+      DAPR_GRPC_PORT:          50001
+      APP_PROTOCOL:            http
+    Mounts:
+      /etc/parking-api from volume3 (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-bfg8g (ro)
+  daprd:
+    Container ID:  containerd://f4d40b96f12748954fb5732df5c641ffdda17c6d7cc78b8fdbb1a6a06e80e88d
+    Image:         docker.io/daprio/daprd:1.12.3
+    Image ID:      docker.io/daprio/daprd@sha256:72ffd7f32b47868f9aa72fbe809c9e39c32fa4609b51b3cf3087fcdf480e180c
+    Ports:         3500/TCP, 50001/TCP, 50002/TCP, 9090/TCP
+    Host Ports:    0/TCP, 0/TCP, 0/TCP, 0/TCP
+    Args:
+      /daprd
+      --dapr-http-port
+      3500
+      --dapr-grpc-port
+      50001
+      --dapr-internal-grpc-port
+      50002
+      --dapr-listen-addresses
+      [::1],127.0.0.1
+      --dapr-public-port
+      3501
+      --app-id
+      parking-api
+      --app-protocol
+      http
+      --log-level
+      info
+      --dapr-graceful-shutdown-seconds
+      -1
+      --mode
+      kubernetes
+      --control-plane-address
+      dapr-api.dapr-system.svc.cluster.local:80
+      --sentry-address
+      dapr-sentry.dapr-system.svc.cluster.local:443
+      --app-port
+      3000
+      --enable-metrics
+      --metrics-port
+      9090
+      --config
+      daprsystem
+      --placement-host-address
+      dapr-placement-server.dapr-system.svc.cluster.local:50005
+      --enable-app-health-check
+      --app-health-check-path
+      /healthz
+      --app-health-probe-interval
+      3
+      --app-health-probe-timeout
+      200
+      --app-health-threshold
+      2
+      --enable-mtls
+    State:          Running
+      Started:      Sun, 07 Jan 2024 22:19:46 -0600
+    Last State:     Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Sun, 07 Jan 2024 22:19:30 -0600
+      Finished:     Sun, 07 Jan 2024 22:19:46 -0600
+    Ready:          False
+    Restart Count:  19
+    Liveness:       http-get http://:3501/v1.0/healthz delay=3s timeout=3s period=6s #success=1 #failure=3
+    Readiness:      http-get http://:3501/v1.0/healthz delay=3s timeout=3s period=6s #success=1 #failure=3
+    Environment:
+      NAMESPACE:                       dapr-system
+      POD_NAME:                        parking-api-6bff798655-cntzv (v1:metadata.name)
+      DAPR_TRUST_ANCHORS:              -----BEGIN CERTIFICATE-----
+                                       MIIBcTCCARagAwIBAgIQOBExEZxaqGJm6GQSDYeuZjAKBggqhkjOPQQDAjAYMRYw
+                                       FAYDVQQKEw1jbHVzdGVyLmxvY2FsMB4XDTI0MDEwNDAyMTk1MVoXDTI1MDEwMzAy
+                                       MzQ1MVowGDEWMBQGA1UEChMNY2x1c3Rlci5sb2NhbDBZMBMGByqGSM49AgEGCCqG
+                                       SM49AwEHA0IABE8O7PXAARh6Vy9WP9EW0d9hPh56HAc/MMoJT9T+feGl76pzjXdI
+                                       9fgA+Eoo6TDBDVOxMZmy0CgbS+Qvh92a4B6jQjBAMA4GA1UdDwEB/wQEAwICpDAP
+                                       BgNVHRMBAf8EBTADAQH/MB0GA1UdDgQWBBRA7yeW6N9dQYvz06cksGmW/DfClDAK
+                                       BggqhkjOPQQDAgNJADBGAiEAxQ1rXSzpPPzmEo8jMD7ppIlwQ5kaIEgtwF6UFOvt
+                                       7csCIQDN7qXVm1KMNEEuvRhFaoUHLExT4v35MkYCuuPy2hjE5Q==
+                                       -----END CERTIFICATE-----
+
+      DAPR_CONTROLPLANE_NAMESPACE:     dapr-system
+      DAPR_CONTROLPLANE_TRUST_DOMAIN:  cluster.local
+      DAPR_CERT_CHAIN:                 -----BEGIN CERTIFICATE-----
+                                       MIIB9TCCAZqgAwIBAgIQRw/nibr4FkZBTQKuFcSe8zAKBggqhkjOPQQDAjA8MTow
+                                       OAYDVQQKEzFzcGlmZmU6Ly9jbHVzdGVyLmxvY2FsL25zL2RhcHItc3lzdGVtL2Rh
+                                       cHItc2VudHJ5MB4XDTI0MDEwODAzMjMzM1oXDTI1MDEwMzAyMzQ1MVowADBZMBMG
+                                       ByqGSM49AgEGCCqGSM49AwEHA0IABJRGHyIamPkA22vgCW7DaW/rCM7DwE8TMefx
+                                       7Sq+8YanKjPS2GYlUWG8UppkrxKbjKg78iKvNz6ADMAbqVVTqUWjgbkwgbYwDgYD
+                                       VR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAfBgNV
+                                       HSMEGDAWgBQubPttznHcs71kTBqjLfFtmqdbRzBkBgNVHREBAf8EWjBYgiZfdW5r
+                                       bm93bi5kYXByLXN5c3RlbS5zdmMuY2x1c3Rlci5sb2NhbIYuc3BpZmZlOi8vY2x1
+                                       c3Rlci5sb2NhbC9ucy9kYXByLXN5c3RlbS9fdW5rbm93bjAKBggqhkjOPQQDAgNJ
+                                       ADBGAiEA4QglSRDbWCt3je3hRmJQzUDXKoxgGdqKFU8pp+74Zb8CIQDwDQsWtESv
+                                       sA6xu7lACHuYpwkUzHyY4DYBnY11tAoRhw==
+                                       -----END CERTIFICATE-----
+                                       -----BEGIN CERTIFICATE-----
+                                       MIIBrjCCAVSgAwIBAgIQWGht0OVyPaFuw50OxszdCjAKBggqhkjOPQQDAjAYMRYw
+                                       FAYDVQQKEw1jbHVzdGVyLmxvY2FsMB4XDTI0MDEwNDAyMTk1MVoXDTI1MDEwMzAy
+                                       MzQ1MVowPDE6MDgGA1UEChMxc3BpZmZlOi8vY2x1c3Rlci5sb2NhbC9ucy9kYXBy
+                                       LXN5c3RlbS9kYXByLXNlbnRyeTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABN52
+                                       +ThqS1gFRqaLLIPG80UEA3Yf43lrZ1Jqp0w3fhrf1bTIlF3KLlnwxNlcIMQwt6z6
+                                       BpA9Go5KiK3PGa6KKdGjXDBaMA4GA1UdDwEB/wQEAwIBpjAPBgNVHRMBAf8EBTAD
+                                       AQH/MB0GA1UdDgQWBBQubPttznHcs71kTBqjLfFtmqdbRzAYBgNVHREEETAPgg1j
+                                       bHVzdGVyLmxvY2FsMAoGCCqGSM49BAMCA0gAMEUCIDzE4cyyT6qA/ouQg4DzhO4O
+                                       1WlyzXY7VqTZ5r8ZFHnNAiEAzuZJfXqFraTDLr9wcy++I9MgFKPQtmzjDKlRVDGo
+                                       Uvw=
+                                       -----END CERTIFICATE-----
+
+      DAPR_CERT_KEY:                   -----BEGIN PRIVATE KEY-----
+                                       MIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQgqq0OpDhMxiKjJpqy
+                                       i6NmFOGxlgnFB1IByizfni+DdsuhRANCAASURh8iGpj5ANtr4Aluw2lv6wjOw8BP
+                                       EzHn8e0qvvGGpyoz0thmJVFhvFKaZK8Sm4yoO/Iirzc+gAzAG6lVU6lF
+                                       -----END PRIVATE KEY-----
+
+      SENTRY_LOCAL_IDENTITY:           dapr-system:default
+    Mounts:
+      /mnt/v1 from volume1 (ro)
+      /mnt/v2 from volume2 (ro)
+      /mnt/v3 from volume3 (rw)
+      /var/run/secrets/dapr.io/sentrytoken from dapr-identity-token (ro)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-bfg8g (ro)
+Conditions:
+  Type              Status
+  Initialized       True
+  Ready             False
+  ContainersReady   False
+  PodScheduled      True
+Volumes:
+  volume1:
+    Type:          HostPath (bare host directory volume)
+    Path:          /volume
+    HostPathType:
+  volume2:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  pv-identity-api
+    ReadOnly:   false
+  volume3:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:
+    SizeLimit:  <unset>
+  kube-api-access-bfg8g:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+  dapr-identity-token:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  7200
+QoS Class:                   Burstable
+Node-Selectors:              kubernetes.io/os=linux
+Tolerations:                 node.kubernetes.io/memory-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason     Age                  From               Message
+  ----     ------     ----                 ----               -------
+  Normal   Scheduled  41m                  default-scheduler  Successfully assigned dapr-system/parking-api-6bff798655-cntzv to aks-agentpool-30676769-vmss000000
+  Normal   Pulled     41m                  kubelet            Successfully pulled image "servicex.azurecr.io/parking-api:latest" in 1.299305023s (1.299315323s including waiting)
+  Warning  Unhealthy  41m                  kubelet            Readiness probe failed: Get "http://10.224.0.76:3501/v1.0/healthz": dial tcp 10.224.0.76:3501: connect: connection refused
+  Warning  Unhealthy  41m                  kubelet            Liveness probe failed: Get "http://10.224.0.76:3501/v1.0/healthz": dial tcp 10.224.0.76:3501: connect: connection refused
+  Normal   Killing    41m                  kubelet            Container daprd failed liveness probe, will be restarted
+  Normal   Pulled     41m (x2 over 41m)    kubelet            Container image "docker.io/daprio/daprd:1.12.3" already present on machine
+  Normal   Created    41m (x2 over 41m)    kubelet            Created container daprd
+  Normal   Started    41m (x2 over 41m)    kubelet            Started container daprd
+  Normal   Started    41m (x2 over 41m)    kubelet            Started container parking-api
+  Normal   Created    41m (x2 over 41m)    kubelet            Created container parking-api
+  Normal   Pulled     41m                  kubelet            Successfully pulled image "servicex.azurecr.io/parking-api:latest" in 161.074878ms (161.081478ms including waiting)
+  Normal   Pulling    41m (x2 over 41m)    kubelet            Pulling image "servicex.azurecr.io/parking-api:latest"
+  Warning  Unhealthy  40m (x3 over 41m)    kubelet            Liveness probe failed: HTTP probe failed with statuscode: 500
+  Warning  Unhealthy  40m (x5 over 41m)    kubelet            Readiness probe failed: HTTP probe failed with statuscode: 500
+  Warning  BackOff    73s (x221 over 40m)  kubelet            Back-off restarting failed container parking-api in pod parking-api-6bff798655-cntzv_dapr-system(4bbca9fe-0631-4d04-8da9-c84bb1a79543)
