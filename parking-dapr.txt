@@ -1,0 +1,57 @@
+time="2024-01-08T04:02:40.554961092Z" level=info msg="Starting Dapr Runtime -- version 1.12.3 -- commit 60de5b8c66190212b0f882c3737015e0561e4785" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime type=log ver=1.12.3
+time="2024-01-08T04:02:40.555061894Z" level=info msg="Log level set to: info" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime type=log ver=1.12.3
+time="2024-01-08T04:02:40.555569401Z" level=info msg="Fetching initial identity certificate from dapr-sentry.dapr-system.svc.cluster.local:443" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime.security type=log ver=1.12.3
+time="2024-01-08T04:02:40.589835379Z" level=info msg="Security is initialized successfully" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime.security type=log ver=1.12.3
+time="2024-01-08T04:02:40.590023981Z" level=info msg="Starting workload cert expiry watcher; current cert expires on: 2024-01-09 04:02:40 +0000 UTC, renewing at 2024-01-08 20:46:10 +0000 UTC" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime.security type=log ver=1.12.3
+time="2024-01-08T04:02:40.590299985Z" level=info msg="Initializing the operator client" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime type=log ver=1.12.3
+time="2024-01-08T04:02:40.626304587Z" level=info msg="metrics server started on :9090/" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime type=log ver=1.12.3
+time="2024-01-08T04:02:40.626608691Z" level=info msg="kubernetes mode configured" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime type=log ver=1.12.3
+time="2024-01-08T04:02:40.626640392Z" level=info msg="app id: parking-api" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime type=log ver=1.12.3
+time="2024-01-08T04:02:40.626696993Z" level=info msg="Dapr trace sampler initialized: DaprTraceSampler(P=0.000100)" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime type=log ver=1.12.3
+time="2024-01-08T04:02:40.626720093Z" level=info msg="Initialized name resolution to kubernetes" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime type=log ver=1.12.3
+time="2024-01-08T04:02:40.626817094Z" level=info msg="Loading components…" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime type=log ver=1.12.3
+time="2024-01-08T04:02:40.627491204Z" level=info msg="Component loaded: kubernetes (secretstores.kubernetes/v1)" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime type=log ver=1.12.3
+time="2024-01-08T04:02:40.63797465Z" level=info msg="Component loaded: sxsystemsdapr-secretstore (secretstores.azure.keyvault/v1)" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime type=log ver=1.12.3
+time="2024-01-08T04:02:40.64225971Z" level=info msg="Component loaded: sxsystems-statestore (state.redis/v1)" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime type=log ver=1.12.3
+time="2024-01-08T04:02:40.642772517Z" level=info msg="Component loaded: sx-pubsub (pubsub.azure.servicebus.topics/v1)" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime type=log ver=1.12.3
+time="2024-01-08T04:02:40.642801317Z" level=info msg="Waiting for all outstanding components to be processed…" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime type=log ver=1.12.3
+time="2024-01-08T04:02:40.642812617Z" level=info msg="All outstanding components processed" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime type=log ver=1.12.3
+time="2024-01-08T04:02:40.642820718Z" level=info msg="Loading endpoints…" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime type=log ver=1.12.3
+time="2024-01-08T04:02:40.643620329Z" level=info msg="Waiting for all outstanding http endpoints to be processed…" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime type=log ver=1.12.3
+time="2024-01-08T04:02:40.643643929Z" level=info msg="All outstanding http endpoints processed" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime type=log ver=1.12.3
+time="2024-01-08T04:02:40.643803531Z" level=info msg="gRPC server listening on TCP address: [::1]:50001" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime.grpc.api type=log ver=1.12.3
+time="2024-01-08T04:02:40.643921033Z" level=info msg="gRPC server listening on TCP address: 127.0.0.1:50001" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime.grpc.api type=log ver=1.12.3
+time="2024-01-08T04:02:40.643934933Z" level=info msg="Enabled gRPC tracing middleware" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime.grpc.api type=log ver=1.12.3
+time="2024-01-08T04:02:40.643944833Z" level=info msg="Enabled gRPC metrics middleware" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime.grpc.api type=log ver=1.12.3
+time="2024-01-08T04:02:40.644007234Z" level=info msg="Registering workflow engine for gRPC endpoint: [::1]:50001" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime.grpc.api type=log ver=1.12.3
+time="2024-01-08T04:02:40.644037635Z" level=info msg="Enabled gRPC tracing middleware" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime.grpc.api type=log ver=1.12.3
+time="2024-01-08T04:02:40.644045035Z" level=info msg="Enabled gRPC metrics middleware" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime.grpc.api type=log ver=1.12.3
+time="2024-01-08T04:02:40.644075435Z" level=info msg="Registering workflow engine for gRPC endpoint: 127.0.0.1:50001" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime.grpc.api type=log ver=1.12.3
+time="2024-01-08T04:02:40.644090935Z" level=info msg="API gRPC server is running on port 50001" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime type=log ver=1.12.3
+time="2024-01-08T04:02:40.644145536Z" level=info msg="Enabled max body size HTTP middleware with size 4 MB" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime.http type=log ver=1.12.3
+time="2024-01-08T04:02:40.644158336Z" level=info msg="Enabled tracing HTTP middleware" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime.http type=log ver=1.12.3
+time="2024-01-08T04:02:40.644165336Z" level=info msg="Enabled metrics HTTP middleware" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime.http type=log ver=1.12.3
+time="2024-01-08T04:02:40.644606342Z" level=info msg="HTTP server listening on TCP address: [::1]:3500" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime.http type=log ver=1.12.3
+time="2024-01-08T04:02:40.644645843Z" level=info msg="HTTP server listening on TCP address: 127.0.0.1:3500" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime.http type=log ver=1.12.3
+time="2024-01-08T04:02:40.644784845Z" level=info msg="Enabled tracing HTTP middleware" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime.http type=log ver=1.12.3
+time="2024-01-08T04:02:40.644801245Z" level=info msg="Enabled metrics HTTP middleware" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime.http type=log ver=1.12.3
+time="2024-01-08T04:02:40.644891146Z" level=info msg="HTTP server is running on port 3500" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime type=log ver=1.12.3
+time="2024-01-08T04:02:40.644912247Z" level=info msg="The request body size parameter is: 4" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime type=log ver=1.12.3
+time="2024-01-08T04:02:40.645006848Z" level=info msg="gRPC server listening on TCP address: :50002" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime.grpc.internal type=log ver=1.12.3
+time="2024-01-08T04:02:40.645027548Z" level=info msg="Enabled gRPC tracing middleware" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime.grpc.internal type=log ver=1.12.3
+time="2024-01-08T04:02:40.645035048Z" level=info msg="Enabled gRPC metrics middleware" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime.grpc.internal type=log ver=1.12.3
+time="2024-01-08T04:02:40.645068949Z" level=info msg="Internal gRPC server is running on port 50002" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime type=log ver=1.12.3
+time="2024-01-08T04:02:40.64514785Z" level=info msg="application protocol: http. waiting on port 3000.  This will block until the app is listening on that port." app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime type=log ver=1.12.3
+time="2024-01-08T04:02:58.237567632Z" level=info msg="Received signal 'terminated'; beginning shutdown" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.signals type=log ver=1.12.3
+time="2024-01-08T04:02:58.237970338Z" level=info msg="Shutting down workflow engine" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime type=log ver=1.12.3
+time="2024-01-08T04:02:58.238301043Z" level=info msg="Dapr is shutting down" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime type=log ver=1.12.3
+time="2024-01-08T04:02:58.238424745Z" level=info msg="Shutting down component sx-pubsub (pubsub.azure.servicebus.topics/v1)" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime type=log ver=1.12.3
+time="2024-01-08T04:02:58.238546947Z" level=info msg="Shutting down component kubernetes (secretstores.kubernetes/v1)" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime type=log ver=1.12.3
+time="2024-01-08T04:02:58.238658149Z" level=info msg="Shutting down component sxsystemsdapr-secretstore (secretstores.azure.keyvault/v1)" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime type=log ver=1.12.3
+time="2024-01-08T04:02:58.238683749Z" level=info msg="Shutting down component sxsystems-statestore (state.redis/v1)" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime type=log ver=1.12.3
+time="2024-01-08T04:02:58.239095356Z" level=info msg="Closing HTTP server :3501…" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime.http type=log ver=1.12.3
+time="2024-01-08T04:02:58.239173057Z" level=info msg="Closing HTTP server [::1]:3500…" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime.http type=log ver=1.12.3
+time="2024-01-08T04:02:58.23933586Z" level=info msg="Closing HTTP server 127.0.0.1:3500…" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime.http type=log ver=1.12.3
+time="2024-01-08T04:02:58.239422361Z" level=info msg="Dapr runtime stopped" app_id=parking-api instance=parking-api-6bff798655-cntzv scope=dapr.runtime type=log ver=1.12.3
+
+C
