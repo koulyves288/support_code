@@ -1,0 +1,89 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: parking-api
+  namespace: dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: parking-api
+  template:
+    metadata:
+      annotations:
+        dapr.io/app-id: parking-api
+        dapr.io/app-port: "3000"
+        dapr.io/grpc-port: "50001"
+        dapr.io/config: daprsystem
+        dapr.io/enabled: "true"
+        dapr.io/components-path: "/components"
+        dapr.io/volume-mounts: volume1:/mnt/v1,volume2:/mnt/v2
+        dapr.io/volume-mounts-rw: volume3:/mnt/v3
+        dapr.io/enable-app-health-check: "true"
+        dapr.io/app-health-check-path: "/healthz"
+        dapr.io/app-health-probe-interval: "3"
+        dapr.io/app-health-probe-timeout: "200"
+        dapr.io/app-health-threshold: "2"
+      labels:
+        app: parking-api
+    spec:
+      containers:
+      - env:
+        - name: ASPNETCORE_ENVIRONMENT
+          value: Development
+        - name: ASPNETCORE_URLS
+          value: http://+:3000
+        image: servicex.azurecr.io/parkingapi:latest
+        imagePullPolicy: Always
+        name: parking-api
+        ports:
+        - containerPort: 3000
+          name: api-http
+        - containerPort: 50001
+          name: grpc-port
+        resources:
+          limits:
+            cpu: 300m
+            memory: 1000Mi
+          requests:
+            cpu: 100m
+            memory: 250Mi
+        volumeMounts:
+        - mountPath: /etc/parking-api
+          name: volume3
+      imagePullSecrets:
+        - name: registrysecret
+      nodeSelector:
+        kubernetes.io/os: linux
+      volumes:
+      - name: volume3
+        persistentVolumeClaim:
+          claimName: pv-identity-api
+      
+#       initContainers:
+#       - name: wait-for-rabbitmq
+#          image: busybox
+#          command: ['sh', '-c', 'until nc -zv rabbitmq 5672; do echo waiting for rabbitmq; sleep 2; done;']
+#          resources:
+#            requests:
+#             cpu: 1m
+#              memory: 50Mi
+#            limits:
+#              cpu: 75m
+#              memory: 128Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: parking-api
+spec:
+  ports:
+  - name: api-http
+    port: 6006
+    targetPort: 80
+  - name: api-https
+    port: 49888
+    targetPort: 443
+  selector:
+    app: parking-api
